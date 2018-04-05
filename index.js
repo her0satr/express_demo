@@ -1,8 +1,11 @@
 const Joi = require('joi');
 const express = require('express');
 const app = express ();
-
 app.use(express.json());
+
+// route
+var birds = require('./birds')
+app.use('/birds', birds);
 
 const courses = [
     { id: 1, name: 'course 1' },
